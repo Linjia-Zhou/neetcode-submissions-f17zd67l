@@ -1,0 +1,11 @@
+class Solution:
+    def appendCharacters(self, s: str, t: str) -> int:
+        si = ti = 0
+
+        while si < len(s) and ti < len(t):
+            if t[ti] == s[si]:
+                ti += 1
+            
+            si += 1
+        
+        return len(t) - ti
